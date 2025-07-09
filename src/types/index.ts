@@ -9,11 +9,48 @@ export interface FledermausArt {
   id: number;
   art_name: string;
   wissenschaftlicher_name: string;
-  beschreibung: string;
+  familie: string;
+  
+  // Biometrische Daten und Erkennungsmerkmale
+  aussehen_beschreibung: string;
+  fellfarbe: string;
+  besondere_merkmale: string;
+  fluegelspannweite_min: number;
+  fluegelspannweite_max: number;
+  koerperlaenge_min: number;
+  koerperlaenge_max: number;
+  gewicht_min: number;
+  gewicht_max: number;
+  
+  // Verbreitung und Lebensraum
+  geografische_verbreitung: string;
+  typische_lebensraeume: string;
+  haeufigkeit: string;
+  kerngebiete: string;
+  
+  // Quartiere
+  sommerquartiere: string;
+  wochenstuben: string;
+  winterquartiere: string;
+  
+  // Jagdverhalten und Ernährung
+  jagdstrategie: string;
+  jagdgebiete: string;
+  flugverhalten: string;
+  hauptbeutetiere: string;
+  nahrungszusammensetzung: string;
+  
+  // Echoortung und Schutzstatus
+  frequenzbereich_min: number;
+  frequenzbereich_max: number;
+  ortungsruf_charakteristik: string;
+  gefaehrdungsstatus: string;
+  hauptgefaehrdungsursachen: string;
+  
+  // Metadata
   bild_url: string;
-  habitat: string;
-  groesse: string;
-  ruf_charakteristika: string;
+  erstellt_am: Date;
+  aktualisiert_am: Date;
 }
 
 export interface Aufnahme {
