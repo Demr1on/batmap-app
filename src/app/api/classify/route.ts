@@ -108,7 +108,7 @@ async function processNextJob() {
   setTimeout(processNextJob, 100);
 }
 
-async function performAdvancedClassification(audioData: ArrayBuffer) {
+async function performAdvancedClassification(_audioData: ArrayBuffer) {
   // Simuliere komplexe KI-Verarbeitung
   await new Promise(resolve => setTimeout(resolve, 2000));
   

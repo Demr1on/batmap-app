@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { ClassificationResult } from '@/types';
 import { useAudioClassification } from '@/hooks/useAudioClassification';
 import { usePWA } from '@/hooks/usePWA';

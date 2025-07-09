@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     const result = await db.query(
       'SELECT id, fledermaus_art_name, latitude, longitude, wahrscheinlichkeit, erstellt_am FROM Aufnahmen ORDER BY erstellt_am DESC'

@@ -6,8 +6,10 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import AuthButton from '@/components/AuthButton';
+import Link from 'next/link';
 
 // Leaflet Icon Fix
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
@@ -89,12 +91,12 @@ export default function MeineAufnahmen() {
               <p className="text-gray-600">Meine Aufnahmen</p>
             </div>
             <div className="flex items-center gap-4">
-              <a
+              <Link
                 href="/"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
                 Zur Analyse
-              </a>
+              </Link>
               <AuthButton />
             </div>
           </div>
@@ -116,7 +118,7 @@ export default function MeineAufnahmen() {
               
               {aufnahmen.length === 0 ? (
                 <p className="text-gray-600 text-center py-8">
-                  Noch keine Aufnahmen vorhanden. <a href="/" className="text-blue-600 hover:text-blue-800">Erste Aufnahme erstellen</a>
+                  Noch keine Aufnahmen vorhanden. <Link href="/" className="text-blue-600 hover:text-blue-800">Erste Aufnahme erstellen</Link>
                 </p>
               ) : (
                 <div className="space-y-4">
